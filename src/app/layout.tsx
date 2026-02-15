@@ -1,12 +1,23 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
-  title: "Video by Me | Vibe Coding Style",
-  description: "A high-end animated website showcasing video production.",
+  title: "BioClean | Pure Science Skincare",
+  description: "Luxury botanical skincare powered by science. Natural, cruelty-free formulations for radiant, healthy skin. Discover the BioClean difference.",
+  keywords: ["skincare", "natural", "organic", "cruelty-free", "BioClean", "beauty", "botanical"],
 };
 
 export default function RootLayout({
@@ -15,8 +26,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark scroll-smooth">
-      <body className={`${inter.className} bg-black text-white antialiased overflow-x-hidden`}>
+    <html lang="en" className={`${inter.variable} ${playfair.variable} scroll-smooth`}>
+      <body className="font-sans bg-ivory text-charcoal antialiased overflow-x-hidden">
         {children}
       </body>
     </html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUMIÈRE | Advanced Skincare</title>
+    <meta name="description" content="Professional dermatology-grade skincare for radiant skin.">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">LUMIÈRE</a>
+            <nav class="nav">
+                <ul class="nav-links">
+                    <li><a href="#products">Collection</a></li>
+                    <li><a href="#science">Science</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </nav>
+            <div class="nav-icons">
+                <a href="#" class="icon-link"><i data-feather="search"></i></a>
+                <a href="#" class="icon-link cart-trigger">
+                    <i data-feather="shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Scientific<br>Radiance.</h1>
+            <p class="hero-subtitle">Advanced dermatological formulas designed to restore, protect, and illuminate your skin.</p>
+            <a href="#products" class="btn btn-primary">Discover the Collection</a>
+        </div>
+        <div class="hero-image-container">
+            <!-- Placeholder hero until specific one is chosen, using a soft gradient overlay -->
+            <div class="hero-overlay"></div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">The Essential Collection</h2>
+                <p class="section-subtitle">Dermatologist-tested solutions for every skin concern.</p>
+            </div>
+            
+            <div class="product-grid">
+                <!-- Product 1: Acne Foam -->
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="Image by me/Acne Foam.jpeg" alt="Acne Cleaning Foam" class="product-image">
+                        <button class="btn-quick-add" data-id="1" data-name="Acne Cleaning Foam" data-price="10000">Add to Bag</button>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Acne Cleaning Foam</h3>
+                        <p class="product-category">Cleanser</p>
+                        <span class="product-price">10,000 IQD</span>
+                    </div>
+                </div>
+
+                <!-- Product 2: Skin Repair -->
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="Image by me/Skin repair cream.jpeg" alt="Skin Repair Cream" class="product-image">
+                        <button class="btn-quick-add" data-id="2" data-name="Skin Repair Cream" data-price="10000">Add to Bag</button>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Skin Repair Cream</h3>
+                        <p class="product-category">Restorative</p>
+                        <span class="product-price">10,000 IQD</span>
+                    </div>
+                </div>
+
+                <!-- Product 3: Brightness -->
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="Image by me/Brightness.jpeg" alt="Brightness Serum" class="product-image">
+                        <button class="btn-quick-add" data-id="3" data-name="Brightness Serum" data-price="10000">Add to Bag</button>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Brightness Serum</h3>
+                        <p class="product-category">Illumination</p>
+                        <span class="product-price">10,000 IQD</span>
+                    </div>
+                </div>
+
+                <!-- Product 4: Balance Cream -->
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="Image by me/Balance cream.jpeg" alt="Ph Balance Cream" class="product-image">
+                        <button class="btn-quick-add" data-id="4" data-name="Ph Balance Cream" data-price="10000">Add to Bag</button>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Ph Balance Cream</h3>
+                        <p class="product-category">Hydration</p>
+                        <span class="product-price">10,000 IQD</span>
+                    </div>
+                </div>
+
+                <!-- Product 5: Acne Cream -->
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="Image by me/Acne cream.jpeg" alt="Acne Treatment Cream" class="product-image">
+                        <button class="btn-quick-add" data-id="5" data-name="Acne Treatment Cream" data-price="10000">Add to Bag</button>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Acne Treatment Cream</h3>
+                        <p class="product-category">Targeted Care</p>
+                        <span class="product-price">10,000 IQD</span>
+                    </div>
+                </div>
+
+                 <!-- Product 6: Antioxidant -->
+                 <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="Image by me/Antioxidant cream.jpeg" alt="Antioxidant Defense" class="product-image">
+                        <button class="btn-quick-add" data-id="6" data-name="Antioxidant Defense" data-price="10000">Add to Bag</button>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Antioxidant Defense</h3>
+                        <p class="product-category">Protection</p>
+                        <span class="product-price">10,000 IQD</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="#" class="logo">LUMIÈRE</a>
+                <p>Advanced dermatological solutions for tailored skin health.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Customer Care</h4>
+                <ul>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <i data-feather="instagram"></i>
+                    <i data-feather="facebook"></i>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Lumière Skincare. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>
