@@ -25,7 +25,7 @@ export const products: Product[] = [
         volume: "150 مل",
         image: "/images/Acne cream.jpeg",
         video: "/products/fc-acne-bha.mp4",
-        tags: ["حب الشباب", "BHA", "مضاد للبكتيريا"],
+        tags: ["حب الشباب", "حمض الساليسيليك", "مضاد للبكتيريا"],
     },
     {
         id: "fc-brightness",
@@ -49,7 +49,7 @@ export const products: Product[] = [
         volume: "150 مل",
         image: "/images/Balance cream.jpeg",
         video: "/products/fc-balance.mp4",
-        tags: ["توازن", "نياسيناميد", "تحكم بالزيوت"],
+        tags: ["توازن", "نياسيناميد B3", "تحكم بالزيوت"],
     },
     {
         id: "fc-repair",
@@ -61,7 +61,7 @@ export const products: Product[] = [
         volume: "150 مل",
         image: "/images/Skin repair cream.jpeg",
         video: "/products/fc-repair.mp4",
-        tags: ["إصلاح", "بانثينول", "ترطيب"],
+        tags: ["إصلاح", "بانثينول (B5)", "ترطيب"],
     },
     {
         id: "fc-hydrated",
@@ -96,7 +96,7 @@ export const products: Product[] = [
         originalPrice: 12500,
         volume: "150 مل",
         image: "/images/Acne Foam.jpeg",
-        tags: ["حب الشباب", "منظف", "رغوة"],
+        tags: ["حب الشباب", "حمض الساليسيليك", "رغوة"],
     },
     {
         id: "fw-brightness",
@@ -106,7 +106,7 @@ export const products: Product[] = [
         price: 10500,
         originalPrice: 13000,
         volume: "150 مل",
-        tags: ["تفتيح", "منظف", "رغوة"],
+        tags: ["تفتيح", "ألفا أربوتين", "رغوة"],
     },
     {
         id: "fw-balance",
@@ -116,7 +116,7 @@ export const products: Product[] = [
         price: 9000,
         originalPrice: 11500,
         volume: "150 مل",
-        tags: ["توازن", "منظف", "رغوة"],
+        tags: ["توازن", "نياسيناميد B3", "رغوة"],
     },
     {
         id: "fw-repair",
@@ -126,7 +126,7 @@ export const products: Product[] = [
         price: 9000,
         originalPrice: 11500,
         volume: "150 مل",
-        tags: ["إصلاح", "منظف", "رغوة"],
+        tags: ["إصلاح", "بانثينول (B5)", "رغوة"],
     },
     {
         id: "fw-hydrated",
@@ -136,7 +136,7 @@ export const products: Product[] = [
         price: 9000,
         originalPrice: 11500,
         volume: "150 مل",
-        tags: ["ترطيب", "منظف", "رغوة"],
+        tags: ["ترطيب", "حمض الهيالورونيك", "رغوة"],
     },
     {
         id: "fw-antioxidant",
@@ -146,7 +146,7 @@ export const products: Product[] = [
         price: 8500,
         originalPrice: 10500,
         volume: "150 مل",
-        tags: ["مضاد أكسدة", "منظف", "رغوة"],
+        tags: ["مضاد أكسدة", "فيتامين E", "رغوة"],
     },
 
     // Body Care & Intimate Wash
@@ -158,7 +158,7 @@ export const products: Product[] = [
         price: 9500,
         originalPrice: 12000,
         volume: "250 مل",
-        tags: ["لوشن للجسم", "توحيد اللون", "ترطيب"],
+        tags: ["لوشن للجسم", "ألفا أربوتين", "ترطيب"],
     },
     {
         id: "bg-tone-balance",
@@ -168,7 +168,7 @@ export const products: Product[] = [
         price: 9000,
         originalPrice: 11500,
         volume: "250 مل",
-        tags: ["جل استحمام", "توحيد اللون", "منظف"],
+        tags: ["جل استحمام", "نياسيناميد B3", "منظف"],
     },
     {
         id: "bg-skin-repair",
@@ -178,7 +178,7 @@ export const products: Product[] = [
         price: 9000,
         originalPrice: 11500,
         volume: "250 مل",
-        tags: ["جل استحمام", "إصلاح", "منظف"],
+        tags: ["جل استحمام", "بانثينول (B5)", "منظف"],
     },
     {
         id: "iw-antiseptic",

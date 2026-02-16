@@ -3,12 +3,10 @@
 import { motion } from "framer-motion";
 import { products } from "@/data/products";
 import { useCartStore } from "@/store/cart";
-import { Plus } from "lucide-react";
+import { Plus, ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-
 import { useRef } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export function FeaturedCarousel() {
     const featured = products.filter((p) => p.video || p.image).slice(0, 8);
@@ -51,23 +49,21 @@ export function FeaturedCarousel() {
                     </p>
                 </motion.div>
 
-                {/* Navigation Buttons */}
-                <div className="hidden md:flex gap-3">
-                    <button
-                        onClick={() => scroll("left")}
-                        className="p-3 rounded-full border border-forest/10 text-forest hover:bg-forest hover:text-white transition-all duration-300"
-                        aria-label="Scroll left"
-                    >
-                        <ChevronRight className="w-5 h-5" />
-                    </button>
-                    <button
-                        onClick={() => scroll("right")}
-                        className="p-3 rounded-full border border-forest/10 text-forest hover:bg-forest hover:text-white transition-all duration-300"
-                        aria-label="Scroll right"
-                    >
-                        <ChevronLeft className="w-5 h-5" />
-                    </button>
-                </div>
+                {/* Navigation Buttons (Absolute) */}
+                <button
+                    onClick={() => scroll("right")}
+                    className="absolute top-1/2 left-4 md:left-8 -translate-y-1/2 z-20 p-4 rounded-full bg-gold text-forest shadow-lg hover:bg-gold-dark hover:scale-110 transition-all duration-300 hidden md:block"
+                    aria-label="Scroll right"
+                >
+                    <ChevronLeft className="w-6 h-6" />
+                </button>
+                <button
+                    onClick={() => scroll("left")}
+                    className="absolute top-1/2 right-4 md:right-8 -translate-y-1/2 z-20 p-4 rounded-full bg-gold text-forest shadow-lg hover:bg-gold-dark hover:scale-110 transition-all duration-300 hidden md:block"
+                    aria-label="Scroll left"
+                >
+                    <ChevronRight className="w-6 h-6" />
+                </button>
             </div>
 
             {/* Horizontal Scroll */}

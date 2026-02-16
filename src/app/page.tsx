@@ -7,12 +7,11 @@ import { BrandStory } from "@/components/ui/brand-story";
 import { CategoryGrid } from "@/components/ui/category-grid";
 import { ScienceSection } from "@/components/ui/science-section";
 import { VideoShowcase } from "@/components/ui/video-showcase";
-import { ProductCard } from "@/components/ui/product-card";
-import { Testimonials } from "@/components/ui/testimonials";
 import { Newsletter } from "@/components/ui/newsletter";
 import { Footer } from "@/components/ui/footer";
 import { CartSheet } from "@/components/ui/cart-sheet";
-import { products } from "@/data/products";
+import { AllProductsGrid } from "@/components/ui/all-products-grid";
+import { Testimonials } from "@/components/ui/testimonials";
 
 export default function Home() {
   return (
@@ -42,28 +41,8 @@ export default function Home() {
       {/* Video Showcase */}
       <VideoShowcase />
 
-      {/* All Products Grid */}
-      <section className="py-20 md:py-28 bg-ivory" id="products">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-14">
-            <span className="text-sage text-xs tracking-[0.3em] uppercase font-medium">
-              المجموعة
-            </span>
-            <h2 className="font-serif text-4xl md:text-5xl text-forest mt-3 font-bold">
-              جميع المنتجات
-            </h2>
-            <p className="text-warm-gray max-w-lg mx-auto mt-4 text-base">
-              استكشفي مجموعتنا الكاملة من منتجات العناية بالبشرة النباتية، والمصممة بعناية لكل مشاكل البشرة.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-            {products.map((product) => (
-              <ProductCard key={product.id} product={product} />
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* All Products Grid with Filter */}
+      <AllProductsGrid />
 
       {/* Testimonials */}
       <Testimonials />
