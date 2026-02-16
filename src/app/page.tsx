@@ -14,7 +14,7 @@ import { Footer } from "@/components/ui/footer";
 import { CartSheet } from "@/components/ui/cart-sheet";
 import { AllProductsGrid } from "@/components/ui/all-products-grid";
 import { Testimonials } from "@/components/ui/testimonials";
-import { useEffect } from "react";
+import { useEffect, Suspense } from "react";
 
 export default function Home() {
   useEffect(() => {
@@ -49,7 +49,9 @@ export default function Home() {
       <VideoShowcase />
 
       {/* All Products Grid with Filter */}
-      <AllProductsGrid />
+      <Suspense fallback={<div className="py-20 text-center text-sage">جاري التحميل...</div>}>
+        <AllProductsGrid />
+      </Suspense>
 
       {/* Testimonials */}
       <Testimonials />
