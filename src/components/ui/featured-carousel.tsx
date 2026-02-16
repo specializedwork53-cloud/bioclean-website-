@@ -89,11 +89,7 @@ export function FeaturedCarousel() {
                                             muted
                                             loop
                                             playsInline
-                                            onMouseOver={(e) => e.currentTarget.play()}
-                                            onMouseOut={(e) => {
-                                                e.currentTarget.pause();
-                                                e.currentTarget.currentTime = 0;
-                                            }}
+                                            autoPlay
                                             className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
                                         />
                                     ) : product.image ? (

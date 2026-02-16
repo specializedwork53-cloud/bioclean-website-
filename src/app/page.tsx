@@ -1,3 +1,5 @@
+"use client";
+
 import { Navbar } from "@/components/ui/navbar";
 import { AnnouncementBar } from "@/components/ui/announcement-bar";
 import { Hero } from "@/components/ui/hero";
@@ -12,8 +14,13 @@ import { Footer } from "@/components/ui/footer";
 import { CartSheet } from "@/components/ui/cart-sheet";
 import { AllProductsGrid } from "@/components/ui/all-products-grid";
 import { Testimonials } from "@/components/ui/testimonials";
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <main className="flex flex-col min-h-screen">
       {/* Navigation */}

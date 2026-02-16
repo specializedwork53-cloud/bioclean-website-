@@ -40,7 +40,9 @@ export function ProductDetail({ product }: { product: Product }) {
                 <nav className="flex items-center text-sm text-warm-gray mb-10">
                     <Link href="/" className="hover:text-forest transition-colors">الرئيسية</Link>
                     <ChevronRight className="w-4 h-4 mx-2 rotate-180" />
-                    <span className="text-warm-gray">{product.category}</span>
+                    <Link href={`/?category=${product.category}#products`} className="hover:text-forest transition-colors text-warm-gray">
+                        {product.category}
+                    </Link>
                     <ChevronRight className="w-4 h-4 mx-2 rotate-180" />
                     <span className="text-forest font-medium">{product.name}</span>
                 </nav>

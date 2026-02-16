@@ -5,13 +5,38 @@ import { products } from "@/data/products";
 import { ProductCard } from "@/components/ui/product-card";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
+import { useSearchParams } from "next/navigation";
+import { useEffect } from "react";
 
 export function AllProductsGrid() {
-    const { activeIngredient, setActiveIngredient } = useFilterStore();
+    const { activeIngredient, activeCategory, setActiveIngredient, setActiveCategory } = useFilterStore();
+    const searchParams = useSearchParams();
 
-    const filteredProducts = activeIngredient
-        ? products.filter((p) => p.tags.includes(activeIngredient))
-        : products;
+    // Initialize from URL params
+    useEffect(() => {
+        const categoryParam = searchParams.get("category");
+        const ingredientParam = searchParams.get("ingredient");
+
+        if (categoryParam) {
+            setActiveCategory(categoryParam);
+        } else if (ingredientParam) {
+            setActiveIngredient(ingredientParam);
+        }
+    }, [searchParams, setActiveCategory, setActiveIngredient]);
+
+    const filteredProducts = products.filter((p) => {
+        if (activeCategory) return p.category === activeCategory;
+        if (activeIngredient) return p.tags.includes(activeIngredient);
+        return true;
+    });
+
+    const activeFilter = activeCategory || activeIngredient;
+
+    const clearFilters = () => {
+        setActiveCategory(null);
+        setActiveIngredient(null);
+        // Optional: clear URL params if needed, but for now state/UI update is sufficient
+    };
 
     return (
         <section className="py-20 md:py-28 bg-ivory" id="products">
@@ -21,14 +46,14 @@ export function AllProductsGrid() {
                         المجموعة
                     </span>
                     <h2 className="font-serif text-4xl md:text-5xl text-forest mt-3 font-bold">
-                        جميع المنتجات
+                        {activeCategory ? activeCategory : "جميع المنتجات"}
                     </h2>
                     <p className="text-warm-gray max-w-lg mx-auto mt-4 text-base">
                         استكشفي مجموعتنا الكاملة من منتجات العناية بالبشرة النباتية، والمصممة بعناية لكل مشاكل البشرة.
                     </p>
 
                     <AnimatePresence>
-                        {activeIngredient && (
+                        {activeFilter && (
                             <motion.div
                                 initial={{ opacity: 0, y: -10 }}
                                 animate={{ opacity: 1, y: 0 }}
@@ -36,10 +61,12 @@ export function AllProductsGrid() {
                                 className="mt-8 flex justify-center"
                             >
                                 <button
-                                    onClick={() => setActiveIngredient(null)}
+                                    onClick={clearFilters}
                                     className="flex items-center gap-2 px-4 py-2 bg-forest text-white rounded-full text-sm hover:bg-forest/90 transition-colors"
                                 >
-                                    <span>تمت التصفية حسب: {activeIngredient}</span>
+                                    <span>
+                                        {activeCategory ? `التصنيف: ${activeCategory}` : `المكون: ${activeIngredient}`}
+                                    </span>
                                     <X className="w-4 h-4" />
                                 </button>
                             </motion.div>
@@ -66,7 +93,7 @@ export function AllProductsGrid() {
 
                 {filteredProducts.length === 0 && (
                     <div className="text-center py-20 text-warm-gray">
-                        لا توجد منتجات تطابق هذا المكون حالياً.
+                        لا توجد منتجات تطابق هذا التصنيف حالياً.
                     </div>
                 )}
             </div>
