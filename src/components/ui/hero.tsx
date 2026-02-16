@@ -37,7 +37,7 @@ export function Hero() {
                     className="mb-6"
                 >
                     <span className="inline-block py-1 px-3 rounded-full border border-gold/30 bg-black/20 backdrop-blur-md text-gold-light text-xs md:text-sm tracking-[0.3em] uppercase font-medium">
-                        Pure Botanical Science
+                        علم النباتات النقي
                     </span>
                 </motion.div>
 
@@ -48,14 +48,14 @@ export function Hero() {
                     transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
                     className="font-serif text-5xl sm:text-7xl md:text-8xl lg:text-9xl text-white font-medium tracking-tight leading-[1.1] mb-8"
                 >
-                    Nature Meets <br />
+                    الطبيعة تلتقي <br />
                     <span className="italic text-gold-light relative inline-block">
-                        Innovation
+                        بالابتكار
                         <motion.span
                             initial={{ width: 0 }}
                             animate={{ width: "100%" }}
                             transition={{ duration: 1.2, delay: 1.2, ease: "easeInOut" }}
-                            className="absolute -bottom-2 left-0 h-[2px] bg-gold-light"
+                            className="absolute -bottom-2 right-0 h-[2px] bg-gold-light"
                         />
                     </span>
                 </motion.h1>
@@ -67,8 +67,7 @@ export function Hero() {
                     transition={{ duration: 1, delay: 0.6, ease: "easeOut" }}
                     className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto font-light leading-relaxed mb-12"
                 >
-                    Clinically proven formulations that harmonize nature's most potent botanicals
-                    with cutting-edge dermatological science.
+                    تركيبات مثبتة سريرياً تجمع تناغم أقوى النباتات في الطبيعة مع أحدث العلوم الجلدية.
                 </motion.p>
 
                 {/* CTAs */}
@@ -83,8 +82,8 @@ export function Hero() {
                         className="group relative px-8 py-4 bg-white text-forest-deep min-w-[200px] text-center font-sans text-sm tracking-[0.2em] uppercase font-semibold transition-all duration-300 hover:bg-gold-light overflow-hidden"
                     >
                         <span className="relative z-10 flex items-center justify-center gap-2">
-                            Shop Collection
-                            <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+                            تسوقي المجموعة
+                            <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:-translate-x-1 rotate-180" />
                         </span>
                     </a>
 
@@ -92,7 +91,7 @@ export function Hero() {
                         href="#brand-story"
                         className="group px-8 py-4 bg-transparent border border-white/30 text-white min-w-[200px] text-center font-sans text-sm tracking-[0.2em] uppercase font-medium transition-all duration-300 hover:bg-white/10 hover:border-white"
                     >
-                        Our Philosophy
+                        فلسفتنا
                     </a>
                 </motion.div>
             </div>
@@ -105,7 +104,7 @@ export function Hero() {
                 className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10"
             >
                 <div className="flex flex-col items-center gap-2">
-                    <span className="text-white/60 text-[10px] uppercase tracking-[0.2em]">Scroll to Discover</span>
+                    <span className="text-white/60 text-[10px] uppercase tracking-[0.2em]">مرري لاكتشاف المزيد</span>
                     <motion.div
                         animate={{ y: [0, 8, 0] }}
                         transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}

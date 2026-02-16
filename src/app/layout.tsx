@@ -1,23 +1,24 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Cairo, Tajawal } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
+const cairo = Cairo({
+  subsets: ["arabic"],
+  variable: "--font-cairo",
   display: "swap",
 });
 
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-playfair",
+const tajawal = Tajawal({
+  subsets: ["arabic"],
+  weight: ["200", "300", "400", "500", "700", "800", "900"],
+  variable: "--font-tajawal",
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "BioClean | Pure Science Skincare",
-  description: "Luxury botanical skincare powered by science. Natural, cruelty-free formulations for radiant, healthy skin. Discover the BioClean difference.",
-  keywords: ["skincare", "natural", "organic", "cruelty-free", "BioClean", "beauty", "botanical"],
+  title: "بيو كلين | علم العناية بالبشرة النقي",
+  description: "عناية بالبشرة فاخرة مستوحاة من الطبيعة ومدعومة بالعلم. تركيبات طبيعية ونقية لبشرة صحية ومشرقة.",
+  keywords: ["skincare", "natural", "organic", "cruelty-free", "BioClean", "beauty", "botanical", "عناية بالبشرة", "طبيعي", "بيوكلين"],
 };
 
 export default function RootLayout({
@@ -26,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable} scroll-smooth`}>
+    <html lang="ar" dir="rtl" className={`${cairo.variable} ${tajawal.variable} scroll-smooth`}>
       <body className="font-sans bg-ivory text-charcoal antialiased overflow-x-hidden">
         {children}
       </body>

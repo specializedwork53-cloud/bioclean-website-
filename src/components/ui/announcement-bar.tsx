@@ -2,11 +2,11 @@
 
 export function AnnouncementBar() {
     const messages = [
-        "✦ Free Shipping on Orders Over 25,000 IQD ✦",
-        "✦ 100% Natural Ingredients ✦",
-        "✦ Dermatologist Tested & Approved ✦",
-        "✦ Cruelty-Free & Vegan ✦",
-        "✦ New Collection Available Now ✦",
+        "✦ شحن مجاني للطلبات التي تزيد عن 25,000 د.ع ✦",
+        "✦ مكونات طبيعية 100% ✦",
+        "✦ تم اختباره واعتماده من قبل أطباء الجلدية ✦",
+        "✦ نباتي وخالٍ من القسوة ✦",
+        "✦ المجموعة الجديدة متوفرة الآن ✦",
     ];
 
     const repeatedMessages = [...messages, ...messages, ...messages, ...messages];

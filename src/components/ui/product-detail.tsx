@@ -38,10 +38,10 @@ export function ProductDetail({ product }: { product: Product }) {
             <div className="max-w-7xl mx-auto px-6 pt-28 pb-20">
                 {/* Breadcrumb */}
                 <nav className="flex items-center text-sm text-warm-gray mb-10">
-                    <Link href="/" className="hover:text-forest transition-colors">Home</Link>
-                    <ChevronRight className="w-4 h-4 mx-2" />
+                    <Link href="/" className="hover:text-forest transition-colors">الرئيسية</Link>
+                    <ChevronRight className="w-4 h-4 mx-2 rotate-180" />
                     <span className="text-warm-gray">{product.category}</span>
-                    <ChevronRight className="w-4 h-4 mx-2" />
+                    <ChevronRight className="w-4 h-4 mx-2 rotate-180" />
                     <span className="text-forest font-medium">{product.name}</span>
                 </nav>
 
@@ -80,8 +80,8 @@ export function ProductDetail({ product }: { product: Product }) {
 
                             {/* Discount Badge */}
                             {discount > 0 && (
-                                <span className="absolute top-4 left-4 bg-sage text-white text-xs tracking-wider uppercase font-bold px-4 py-2 z-10">
-                                    Save {discount}%
+                                <span className="absolute top-4 right-4 bg-sage text-white text-xs tracking-wider uppercase font-bold px-4 py-2 z-10">
+                                    توفير {discount}%
                                 </span>
                             )}
                         </div>
@@ -110,16 +110,16 @@ export function ProductDetail({ product }: { product: Product }) {
                                     <Star key={i} className="w-4 h-4 fill-gold text-gold" />
                                 ))}
                             </div>
-                            <span className="text-warm-gray text-sm">(24 Reviews)</span>
+                            <span className="text-warm-gray text-sm">(24 تقييم)</span>
                         </div>
 
                         {/* Price */}
                         <div className="flex items-baseline gap-4 mb-8">
                             <span className="text-2xl font-bold text-forest">
-                                {product.price.toLocaleString()} IQD
+                                {product.price.toLocaleString()} د.ع
                             </span>
                             <span className="text-lg text-warm-gray/60 line-through">
-                                {product.originalPrice.toLocaleString()} IQD
+                                {product.originalPrice.toLocaleString()} د.ع
                             </span>
                         </div>
 
@@ -130,7 +130,7 @@ export function ProductDetail({ product }: { product: Product }) {
 
                         {/* Volume */}
                         <div className="flex items-center gap-3 mb-6 pb-6 border-b border-light-gray">
-                            <span className="text-xs tracking-wider uppercase text-warm-gray">Volume:</span>
+                            <span className="text-xs tracking-wider uppercase text-warm-gray">الحجم:</span>
                             <span className="px-4 py-2 border border-sage text-sage text-sm font-medium">
                                 {product.volume}
                             </span>
@@ -173,7 +173,7 @@ export function ProductDetail({ product }: { product: Product }) {
                                 className="flex-1 bg-forest hover:bg-sage text-ivory font-semibold py-4 px-8 text-sm tracking-widest uppercase transition-all duration-300 flex items-center justify-center gap-2"
                             >
                                 <ShoppingBag className="w-4 h-4" />
-                                Add to Bag
+                                إضافة إلى الحقيبة
                             </button>
                         </div>
 
@@ -181,15 +181,15 @@ export function ProductDetail({ product }: { product: Product }) {
                         <div className="space-y-3 py-6 border-t border-light-gray">
                             <div className="flex items-center gap-3 text-sm text-warm-gray">
                                 <Leaf className="w-4 h-4 text-sage flex-shrink-0" />
-                                <span>100% Natural Botanical Ingredients</span>
+                                <span>مكونات نباتية طبيعية 100%</span>
                             </div>
                             <div className="flex items-center gap-3 text-sm text-warm-gray">
                                 <ShieldCheck className="w-4 h-4 text-sage flex-shrink-0" />
-                                <span>Dermatologist Tested & Approved</span>
+                                <span>تم اختباره واعتماده من قبل أطباء الجلدية</span>
                             </div>
                             <div className="flex items-center gap-3 text-sm text-warm-gray">
                                 <Truck className="w-4 h-4 text-sage flex-shrink-0" />
-                                <span>Free Shipping on Orders Over 25,000 IQD</span>
+                                <span>شحن مجاني للطلبات التي تزيد عن 25,000 د.ع</span>
                             </div>
                         </div>
 
@@ -201,11 +201,11 @@ export function ProductDetail({ product }: { product: Product }) {
                                         key={tab}
                                         onClick={() => setActiveTab(tab)}
                                         className={`pb-2 text-sm font-medium capitalize tracking-wide transition-colors ${activeTab === tab
-                                                ? "text-forest border-b-2 border-sage"
-                                                : "text-warm-gray hover:text-forest"
+                                            ? "text-forest border-b-2 border-sage"
+                                            : "text-warm-gray hover:text-forest"
                                             }`}
                                     >
-                                        {tab === "usage" ? "How to Use" : tab}
+                                        {tab === "usage" ? "طريقة الاستخدام" : tab === "ingredients" ? "المكونات" : "الوصف"}
                                     </button>
                                 ))}
                             </div>
@@ -213,26 +213,24 @@ export function ProductDetail({ product }: { product: Product }) {
                             <div className="text-warm-gray leading-relaxed text-sm">
                                 {activeTab === "description" && (
                                     <p>
-                                        Experience the ultimate in skincare luxury with {product.name}.
-                                        Formulated with precision using clinically proven botanical ingredients
-                                        to deliver {product.category.toLowerCase()} benefits that you can see
-                                        and feel. Each jar is crafted in small batches to ensure maximum potency
-                                        and freshness.
+                                        جربي أقصى درجات الرفاهية في العناية بالبشرة مع {product.name}.
+                                        تمت صياغته بدقة باستخدام مكونات نباتية مثبتة سريرياً
+                                        لتقديم فوائد {product.category} التي يمكنك رؤيتها والشعور بها.
+                                        كل عبوة مصنوعة في دفعات صغيرة لضمان أقصى قدر من الفعالية والنضارة.
                                     </p>
                                 )}
                                 {activeTab === "ingredients" && (
                                     <p>
-                                        Aqua (Water), Glycerin, {product.tags.join(", ")}, Cetearyl Alcohol,
-                                        Butyrospermum Parkii (Shea Butter), Simmondsia Chinensis (Jojoba) Seed Oil,
-                                        Tocopherol (Vitamin E), Phenoxyethanol, Ethylhexylglycerin.
+                                        أكوا (ماء)، جليسرين، {product.tags.join(", ")}، كحول سيتيريل،
+                                        زبدة بوتيروسبيرموم باركي (الشيا)، زيت بذور سيموندسيا تشينينسيس (الجوجوبا)،
+                                        توكوفيرول (فيتامين E)، فينوكسي إيثانول، إيثيل هكسيل جليسرين.
                                     </p>
                                 )}
                                 {activeTab === "usage" && (
                                     <p>
-                                        Apply a small amount to clean, dry skin. Massage gently in upward
-                                        circular motions until fully absorbed. Use morning and night for optimal
-                                        results. For best results, pair with the BioClean foam face wash from the
-                                        same range.
+                                        ضعي كمية صغيرة على بشرة نظيفة وجافة. دلكي بلطف بحركات دائرية
+                                        لأعلى حتى يتم امتصاصه بالكامل. استخدميه صباحاً ومساءً للحصول على أفضل
+                                        النتائج. لأفضل النتائج، استخدميه مع غسول الوجه الرغوي BioClean من نفس المجموعة.
                                     </p>
                                 )}
                             </div>
@@ -245,10 +243,10 @@ export function ProductDetail({ product }: { product: Product }) {
                     <div className="mt-24 pt-16 border-t border-light-gray">
                         <div className="text-center mb-12">
                             <span className="text-sage text-xs tracking-[0.3em] uppercase font-medium">
-                                You May Also Like
+                                قد يعجبكِ أيضاً
                             </span>
                             <h2 className="font-serif text-3xl text-forest mt-3 font-bold">
-                                Related Products
+                                منتجات ذات صلة
                             </h2>
                         </div>
 
@@ -282,7 +280,7 @@ export function ProductDetail({ product }: { product: Product }) {
                                         {p.name}
                                     </h3>
                                     <span className="text-sm text-forest font-bold mt-1 block">
-                                        {p.price.toLocaleString()} IQD
+                                        {p.price.toLocaleString()} د.ع
                                     </span>
                                 </Link>
                             ))}

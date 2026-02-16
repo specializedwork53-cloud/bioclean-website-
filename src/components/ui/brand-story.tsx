@@ -62,12 +62,12 @@ export function BrandStory() {
                             transition={{ duration: 0.8 }}
                         >
                             <span className="inline-block py-1 px-3 border border-forest/20 rounded-full text-forest text-xs tracking-[0.2em] uppercase font-medium mb-6">
-                                The Origin
+                                الأصل
                             </span>
                             <h2 className="font-serif text-5xl md:text-6xl lg:text-7xl text-forest font-medium leading-[1.1] mb-8">
-                                Crafted by Science, <br />
+                                صُنع بالعلم، <br />
                                 <span className="italic text-gold-dark relative">
-                                    Inspired by Nature
+                                    مستوحى من الطبيعة
                                 </span>
                             </h2>
                         </motion.div>
@@ -80,15 +80,14 @@ export function BrandStory() {
                             className="space-y-6 text-lg text-warm-gray leading-relaxed max-w-xl"
                         >
                             <p>
-                                <span className="text-forest font-serif text-2xl mr-1">B</span>
-                                ioClean was born from a simple yet profound belief: that the most powerful
-                                skincare solutions are found where cutting-edge dermatological research meets
-                                the untamed potency of the natural world.
+                                <span className="text-forest font-serif text-2xl ml-1">B</span>
+                                وُلدت BioClean من إيمان بسيط وعميق: أن أقوى حلول العناية بالبشرة
+                                توجد عندما يلتقي البحث الجلدي المتقدم مع القوة الجامحة لعالم الطبيعة.
                             </p>
                             <p>
-                                We reject the compromise between clinical efficacy and clean formulation.
-                                Every bottle represents a harmonious balance—meticulously crafted in small batches
-                                to ensure the highest potency, freshness, and soul.
+                                نحن نرفض التنازل بين الفعالية السريرية والمركبات النقية.
+                                كل زجاجة تمثل توازناً متناغماً—صُنعت بدقة في دفعات صغيرة
+                                لضمان أعلى درجات الفعالية، والنضارة، والروح.
                             </p>
                         </motion.div>
 
@@ -102,15 +101,15 @@ export function BrandStory() {
                             <div className="grid grid-cols-3 gap-8 mb-10 border-y border-forest/10 py-8">
                                 <div>
                                     <span className="block font-serif text-4xl text-forest mb-1">98%</span>
-                                    <span className="text-xs uppercase tracking-wider text-warm-gray">Natural Origin</span>
+                                    <span className="text-xs uppercase tracking-wider text-warm-gray">أصل طبيعي</span>
                                 </div>
                                 <div>
                                     <span className="block font-serif text-4xl text-forest mb-1">100%</span>
-                                    <span className="text-xs uppercase tracking-wider text-warm-gray">Vegan & Cruelty-Free</span>
+                                    <span className="text-xs uppercase tracking-wider text-warm-gray">نباتي 100%</span>
                                 </div>
                                 <div>
                                     <span className="block font-serif text-4xl text-forest mb-1">20+</span>
-                                    <span className="text-xs uppercase tracking-wider text-warm-gray">Active Botanicals</span>
+                                    <span className="text-xs uppercase tracking-wider text-warm-gray">نباتات نشطة</span>
                                 </div>
                             </div>
 
@@ -118,8 +117,8 @@ export function BrandStory() {
                                 href="#science"
                                 className="group inline-flex items-center gap-3 text-forest text-sm tracking-[0.2em] uppercase font-semibold border-b border-forest/30 pb-1 hover:border-forest transition-all"
                             >
-                                Explore Our Process
-                                <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+                                اكتشفي عمليتنا
+                                <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:-translate-x-1 rotate-180" />
                             </a>
                         </motion.div>
                     </div>

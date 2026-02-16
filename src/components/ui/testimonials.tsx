@@ -6,42 +6,42 @@ import { useState } from "react";
 
 const reviews = [
     {
-        name: "Sarah M.",
-        product: "BRIGHTNESS Face Cream",
+        name: "سارة م.",
+        product: "كريم الوجه للإشراق",
         rating: 5,
-        text: "I've been using BioClean Brightness for 3 months and the results are incredible. My dark spots have faded significantly and my skin has a natural glow I never thought possible.",
+        text: "أستخدم كريم الإشراق من BioClean منذ 3 أشهر والنتائج مذهلة. تلاشت البقع الداكنة بشكل ملحوظ وأصبحت بشرتي تتمتع بنضارة طبيعية لم أكن أتخيلها.",
         avatar: "S",
         verified: true,
     },
     {
-        name: "Layla K.",
-        product: "ACNE BHA Face Cream",
+        name: "ليلى ك.",
+        product: "كريم حب الشباب BHA",
         rating: 5,
-        text: "Finally found something that actually works for my acne-prone skin. The BHA formula is gentle yet effective. My skin cleared up within weeks and the texture is so much smoother.",
+        text: "أخيراً وجدت شيئاً يعمل فعلاً لبشرتي المعرضة لحب الشباب. تركيبة BHA لطيفة ولكنها فعالة. صفيت بشرتي خلال أسابيع وأصبح ملمسها أكثر نعومة.",
         avatar: "L",
         verified: true,
     },
     {
-        name: "Noor A.",
-        product: "BALANCE Face Cream",
+        name: "نور أ.",
+        product: "كريم التوازن",
         rating: 5,
-        text: "The Balance cream transformed my oily T-zone completely. My skin feels balanced, fresh, and the packaging is absolutely beautiful. Worth every dinar!",
+        text: "كريم التوازن غيّر منطقة T الدهنية تماماً. بشرتي تشعر بالتوازن والانتعاش، والتغليف جميل جداً. يستحق كل دينار!",
         avatar: "N",
         verified: true,
     },
     {
-        name: "Reem H.",
-        product: "REPAIR Face Cream",
+        name: "ريم ح.",
+        product: "كريم الإصلاح",
         rating: 5,
-        text: "After years of trying different brands, BioClean Repair was a game-changer. My sensitive skin loves the Panthenol formula. It feels like luxury in a jar.",
+        text: "بعد سنوات من تجربة علامات تجارية مختلفة، كريم الإصلاح من BioClean كان نقطة تحول. بشرتي الحساسة تحب تركيبة البانثينول. أشعر وكأنها رفاهية في عبوة.",
         avatar: "R",
         verified: true,
     },
     {
-        name: "Zainab T.",
-        product: "ANTIOXIDANT Face Cream",
+        name: "زينب ت.",
+        product: "كريم مضاد للأكسدة",
         rating: 5,
-        text: "The antioxidant cream keeps my skin feeling youthful and protected. I love that it's 100% natural. The Vitamin E makes such a noticeable difference in skin softness.",
+        text: "الكريم المضاد للأكسدة يحافظ على بشرتي شابة ومحمية. أحب أنه طبيعي 100%. فيتامين E يحدث فرقاً ملحوظاً في نعومة البشرة.",
         avatar: "Z",
         verified: true,
     },
@@ -60,16 +60,16 @@ export function Testimonials() {
                     className="text-center mb-16"
                 >
                     <span className="text-sage text-xs tracking-[0.3em] uppercase font-medium">
-                        Testimonials
+                        آراء العملاء
                     </span>
                     <h2 className="font-serif text-4xl md:text-5xl text-forest mt-3 font-bold">
-                        Loved By Thousands
+                        أحبته الآلاف
                     </h2>
                     <div className="flex items-center justify-center gap-1 mt-4">
                         {[...Array(5)].map((_, i) => (
                             <Star key={i} className="w-5 h-5 fill-gold text-gold" />
                         ))}
-                        <span className="text-warm-gray text-sm ml-2">4.9 avg rating</span>
+                        <span className="text-warm-gray text-sm mr-2">متوسط تقييم 4.9</span>
                     </div>
                 </motion.div>
 
@@ -108,7 +108,7 @@ export function Testimonials() {
                                         <span className="font-semibold text-sm text-forest">{review.name}</span>
                                         {review.verified && (
                                             <span className="text-[9px] tracking-wider uppercase text-sage bg-sage/10 px-2 py-0.5 rounded-full">
-                                                Verified
+                                                موثق
                                             </span>
                                         )}
                                     </div>

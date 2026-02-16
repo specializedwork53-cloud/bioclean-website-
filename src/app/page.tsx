@@ -47,13 +47,13 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-14">
             <span className="text-sage text-xs tracking-[0.3em] uppercase font-medium">
-              The Collection
+              المجموعة
             </span>
             <h2 className="font-serif text-4xl md:text-5xl text-forest mt-3 font-bold">
-              All Products
+              جميع المنتجات
             </h2>
             <p className="text-warm-gray max-w-lg mx-auto mt-4 text-base">
-              Explore our complete range of botanical skincare, meticulously crafted for every skin concern.
+              استكشفي مجموعتنا الكاملة من منتجات العناية بالبشرة النباتية، والمصممة بعناية لكل مشاكل البشرة.
             </p>
           </div>
 

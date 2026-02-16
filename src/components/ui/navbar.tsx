@@ -8,10 +8,10 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
-    { label: "Shop", href: "#products" },
-    { label: "Our Story", href: "#story" },
-    { label: "Ingredients", href: "#science" },
-    { label: "Reviews", href: "#reviews" },
+    { label: "المتجر", href: "#products" },
+    { label: "قصتنا", href: "#story" },
+    { label: "المكونات", href: "#science" },
+    { label: "آراء العملاء", href: "#reviews" },
 ];
 
 export function Navbar() {
@@ -87,13 +87,13 @@ export function Navbar() {
                         <div className="hidden md:flex items-center gap-6">
                             <button
                                 className={cn("transition-colors duration-300 hover:scale-110", scrolled ? "text-forest-deep hover:text-gold-dark" : "text-white hover:text-gold-light")}
-                                aria-label="Search"
+                                aria-label="بحث"
                             >
                                 <Search strokeWidth={1.5} className="w-5 h-5" />
                             </button>
                             <button
                                 className={cn("transition-colors duration-300 hover:scale-110", scrolled ? "text-forest-deep hover:text-gold-dark" : "text-white hover:text-gold-light")}
-                                aria-label="Account"
+                                aria-label="الحساب"
                             >
                                 <User strokeWidth={1.5} className="w-5 h-5" />
                             </button>
@@ -102,7 +102,7 @@ export function Navbar() {
                         {/* Cart */}
                         <button
                             className={cn("relative transition-colors duration-300 hover:scale-110", scrolled ? "text-forest-deep hover:text-gold-dark" : "text-white hover:text-gold-light")}
-                            aria-label="Shopping bag"
+                            aria-label="سلة التسوق"
                             onClick={() => document.getElementById("cart-toggle")?.click()}
                         >
                             <ShoppingBag strokeWidth={1.5} className="w-5 h-5" />
@@ -124,7 +124,7 @@ export function Navbar() {
                         <button
                             className={cn("lg:hidden transition-colors duration-300", scrolled ? "text-forest-deep" : "text-white")}
                             onClick={() => setMobileOpen(!mobileOpen)}
-                            aria-label="Menu"
+                            aria-label="القائمة"
                         >
                             <Menu strokeWidth={1.5} className="w-7 h-7" />
                         </button>
@@ -155,7 +155,7 @@ export function Navbar() {
                                 <button
                                     onClick={() => setMobileOpen(false)}
                                     className="p-2 -mr-2 text-warm-gray hover:text-forest-deep transition-colors"
-                                    aria-label="Close menu"
+                                    aria-label="إغلاق القائمة"
                                 >
                                     <X strokeWidth={1.5} className="w-8 h-8" />
                                 </button>
@@ -183,13 +183,13 @@ export function Navbar() {
                                     <div className="w-10 h-10 rounded-full bg-cream group-hover:bg-sand flex items-center justify-center transition-colors">
                                         <User strokeWidth={1.5} className="w-5 h-5" />
                                     </div>
-                                    <span className="uppercase tracking-widest text-xs font-semibold">Account</span>
+                                    <span className="uppercase tracking-widest text-xs font-semibold">الحساب</span>
                                 </a>
                                 <a href="#" className="flex items-center gap-4 text-warm-gray hover:text-forest-deep transition-colors group">
                                     <div className="w-10 h-10 rounded-full bg-cream group-hover:bg-sand flex items-center justify-center transition-colors">
                                         <Search strokeWidth={1.5} className="w-5 h-5" />
                                     </div>
-                                    <span className="uppercase tracking-widest text-xs font-semibold">Search</span>
+                                    <span className="uppercase tracking-widest text-xs font-semibold">بحث</span>
                                 </a>
                             </div>
                         </motion.div>

@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 import { Leaf, Heart, ShieldCheck, Recycle } from "lucide-react";
 
 const promises = [
-    { icon: Leaf, label: "100% Natural", desc: "Pure botanical ingredients" },
-    { icon: Heart, label: "Cruelty-Free", desc: "Never tested on animals" },
-    { icon: ShieldCheck, label: "Dermatologist Tested", desc: "Clinically proven safe" },
-    { icon: Recycle, label: "Eco-Friendly", desc: "Sustainable packaging" },
+    { icon: Leaf, label: "طبيعي 100%", desc: "مكونات نباتية نقية" },
+    { icon: Heart, label: "خالٍ من القسوة", desc: "لم يتم اختباره على الحيوانات" },
+    { icon: ShieldCheck, label: "مختبر من قبل أطباء الجلد", desc: "آمن ومثبت سريرياً" },
+    { icon: Recycle, label: "صديق للبيئة", desc: "تغليف مستدام" },
 ];
 
 export function BrandPromise() {

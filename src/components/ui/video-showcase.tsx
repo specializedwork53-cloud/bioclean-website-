@@ -61,17 +61,17 @@ export function VideoShowcase() {
                     className="max-w-3xl mx-auto"
                 >
                     <span className="inline-block py-1 px-3 border border-white/20 rounded-full text-gold-light text-xs tracking-[0.2em] uppercase font-medium mb-8 bg-black/20 backdrop-blur-md">
-                        The Ritual
+                        الطقوس
                     </span>
 
                     <h2 className="font-serif text-5xl md:text-7xl lg:text-8xl font-medium text-white mb-8 leading-[0.95] tracking-tight">
-                        Transform Your <br />
-                        <span className="italic text-white/90">Daily Routine</span>
+                        حوّلي روتينك <br />
+                        <span className="italic text-white/90">اليومي</span>
                     </h2>
 
                     <p className="text-white/80 text-lg md:text-xl leading-relaxed max-w-xl mx-auto mb-12 font-light">
-                        Experience the luxury of nature-powered skincare. Each application
-                        is a moment of self-care, designed to nourish both skin and soul.
+                        جربي رفاهية العناية بالبشرة المدعومة بالطبيعة. كل استخدام
+                        هو لحظة للعناية بالذات، مصممة لتغذية البشرة والروح معاً.
                     </p>
 
                     <div className="flex flex-col items-center gap-6">
@@ -86,7 +86,7 @@ export function VideoShowcase() {
                             )}
                         </button>
                         <span className="text-white/60 text-xs tracking-widest uppercase">
-                            {isPlaying ? "Pause Video" : "Play Video"}
+                            {isPlaying ? "إيقاف الفيديو" : "تشغيل الفيديو"}
                         </span>
                     </div>
                 </motion.div>

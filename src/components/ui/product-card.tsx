@@ -62,15 +62,15 @@ export function ProductCard({ product }: ProductCardProps) {
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500" />
 
                 {/* Badges */}
-                <div className="absolute top-3 left-3 flex flex-col gap-2 z-10">
+                <div className="absolute top-3 right-3 flex flex-col gap-2 z-10">
                     {discount > 0 && (
                         <span className="bg-white/90 backdrop-blur-sm text-forest text-[10px] tracking-wider uppercase font-bold px-2 py-1">
-                            -{discount}%
+                            خصم {discount}%
                         </span>
                     )}
                     {product.tags.includes("New") && (
                         <span className="bg-forest text-white text-[10px] tracking-wider uppercase font-medium px-2 py-1">
-                            New
+                            جديد
                         </span>
                     )}
                 </div>
@@ -84,7 +84,7 @@ export function ProductCard({ product }: ProductCardProps) {
                         }}
                         className="w-full py-3 bg-white/95 backdrop-blur-md text-forest hover:bg-forest hover:text-white transition-all duration-300 text-xs tracking-widest uppercase font-semibold border border-white/20 shadow-lg"
                     >
-                        Quick Add
+                        إضافة سريعة
                     </button>
                 </div>
             </Link>
@@ -100,10 +100,10 @@ export function ProductCard({ product }: ProductCardProps) {
                     {product.category}
                 </div>
                 <div className="flex items-center justify-center gap-3">
-                    <span className="text-forest font-medium">{product.price.toLocaleString()} IQD</span>
+                    <span className="text-forest font-medium">{product.price.toLocaleString()} د.ع</span>
                     {product.originalPrice > product.price && (
                         <span className="text-warm-gray/50 text-xs line-through decoration-warm-gray/50">
-                            {product.originalPrice.toLocaleString()} IQD
+                            {product.originalPrice.toLocaleString()} د.ع
                         </span>
                     )}
                 </div>

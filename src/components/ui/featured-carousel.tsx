@@ -41,13 +41,13 @@ export function FeaturedCarousel() {
                     className="max-w-xl"
                 >
                     <span className="text-sage text-xs tracking-[0.3em] uppercase font-medium">
-                        Curated For You
+                        مختارة لكِ
                     </span>
                     <h2 className="font-serif text-4xl md:text-5xl text-forest mt-3 font-bold mb-4">
-                        Bestsellers
+                        الأكثر مبيعاً
                     </h2>
                     <p className="text-warm-gray text-sm md:text-base leading-relaxed">
-                        Discover our most-loved formulations, backed by science and cherished by our community.
+                        اكتشفي تركيباتنا الأكثر محبوبية، المدعومة بالعلم والمفضلة لدى مجتمعنا.
                     </p>
                 </motion.div>
 
@@ -58,14 +58,14 @@ export function FeaturedCarousel() {
                         className="p-3 rounded-full border border-forest/10 text-forest hover:bg-forest hover:text-white transition-all duration-300"
                         aria-label="Scroll left"
                     >
-                        <ChevronLeft className="w-5 h-5" />
+                        <ChevronRight className="w-5 h-5" />
                     </button>
                     <button
                         onClick={() => scroll("right")}
                         className="p-3 rounded-full border border-forest/10 text-forest hover:bg-forest hover:text-white transition-all duration-300"
                         aria-label="Scroll right"
                     >
-                        <ChevronRight className="w-5 h-5" />
+                        <ChevronLeft className="w-5 h-5" />
                     </button>
                 </div>
             </div>
@@ -132,7 +132,7 @@ export function FeaturedCarousel() {
 
                                     {/* Tag */}
                                     {product.tags[0] && (
-                                        <span className="absolute top-4 left-4 text-[9px] tracking-[0.2em] uppercase font-bold bg-white/90 backdrop-blur-sm text-forest px-3 py-1.5 z-10">
+                                        <span className="absolute top-4 right-4 text-[9px] tracking-[0.2em] uppercase font-bold bg-white/90 backdrop-blur-sm text-forest px-3 py-1.5 z-10">
                                             {product.tags[0]}
                                         </span>
                                     )}
@@ -147,7 +147,7 @@ export function FeaturedCarousel() {
                                 </Link>
                                 <div className="flex items-center justify-center gap-3">
                                     <span className="text-forest text-sm font-semibold">
-                                        {product.price.toLocaleString()} IQD
+                                        {product.price.toLocaleString()} د.ع
                                     </span>
                                 </div>
                             </div>
@@ -156,8 +156,8 @@ export function FeaturedCarousel() {
                 </div>
 
                 {/* Fade edges */}
-                <div className="absolute top-0 left-0 w-8 md:w-16 h-full bg-gradient-to-r from-ivory to-transparent pointer-events-none z-10" />
                 <div className="absolute top-0 right-0 w-8 md:w-16 h-full bg-gradient-to-l from-ivory to-transparent pointer-events-none z-10" />
+                <div className="absolute top-0 left-0 w-8 md:w-16 h-full bg-gradient-to-r from-ivory to-transparent pointer-events-none z-10" />
             </div>
         </section>
     );

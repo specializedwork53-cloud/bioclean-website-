@@ -7,38 +7,38 @@ import { cn } from "@/lib/utils";
 
 const ingredients = [
     {
-        name: "Alpha-Arbutin",
-        description: "A natural skin brightener that reduces melanin formation, fading age spots and promoting luminous, even-toned skin.",
+        name: "ألفا أربوتين",
+        description: "مفتح طبيعي للبشرة يقلل من تكوين الميلانين، ويخفي بقع الشيخوخة ويعزز بشرة مضيئة ومتجانسة اللون.",
         icon: Sun,
         color: "text-gold",
     },
     {
-        name: "Niacinamide B3",
-        description: "Minimizes pores, balances oil production, strengthens the skin barrier, and improves uneven skin tone for a smoother complexion.",
+        name: "نياسيناميد B3",
+        description: "يقلل من المسام، ويوازن إنتاج الدهون، ويقوي حاجز البشرة، ويحسن تفاوت لون البشرة للحصول على مظهر أكثر نعومة.",
         icon: ShieldCheck,
         color: "text-sage",
     },
     {
-        name: "Salicylic Acid",
-        description: "A beta hydroxy acid that deeply cleanses pores, sheds dead skin buildup, and reduces inflammation for clear, refined skin.",
+        name: "حمض الساليسيليك",
+        description: "حمض بيتا هيدروكسي ينظف المسام بعمق، ويزيل تراكم الجلد الميت، ويقلل الالتهاب لبشرة صافية ونقية.",
         icon: FlaskConical,
         color: "text-white",
     },
     {
-        name: "Hyaluronic Acid",
-        description: "Holds 1000x its weight in water, providing intense deep hydration, plumping fine lines, and restoring skin's youthful bounce.",
+        name: "حمض الهيالورونيك",
+        description: "يحمل 1000 ضعف وزنه من الماء، مما يوفر ترطيباً عميقاً ومكثفاً، ويملأ الخطوط الدقيقة، ويعيد مرونة الشباب للبشرة.",
         icon: Droplets,
         color: "text-sage",
     },
     {
-        name: "Panthenol (B5)",
-        description: "Deeply penetrating moisturizer that soothes, heals, and repairs damaged skin while strengthening the protective barrier.",
+        name: "بانثينول (B5)",
+        description: "مرطب يتغلغل بعمق، يهدئ، ويعالج، ويصلح البشرة المتضررة مع تقوية الحاجز الواقي.",
         icon: Heart,
         color: "text-gold",
     },
     {
-        name: "Vitamin E",
-        description: "A powerful antioxidant that neutralizes free radicals, prolongs cell life, and softens skin with lasting nourishment.",
+        name: "فيتامين E",
+        description: "مضاد أكسدة قوي يحيد الجذور الحرة، ويطيل عمر الخلايا، وينعم البشرة بتغذية دائمة.",
         icon: Sparkles,
         color: "text-white",
     },
@@ -66,15 +66,15 @@ export function ScienceSection() {
                 >
                     <div className="max-w-2xl">
                         <span className="inline-block py-1 px-3 border border-white/20 rounded-full text-gold-light text-xs tracking-[0.2em] uppercase font-medium mb-6">
-                            Powered By Nature
+                            مدعوم بالطبيعة
                         </span>
                         <h2 className="font-serif text-5xl md:text-6xl lg:text-7xl font-medium leading-[1.1]">
-                            The Science <span className="italic text-gold-light">Within</span>
+                            العلم <span className="italic text-gold-light">في الداخل</span>
                         </h2>
                     </div>
                     <p className="text-white/70 max-w-sm text-base md:text-lg leading-relaxed mb-2">
-                        Our formulations harness clinically proven botanical ingredients,
-                        each selected for its transformative power. Pure science, pure results.
+                        تستفيد تركيباتنا من مكونات نباتية مثبتة سريرياً،
+                        تم اختيار كل منها لقوتها التحويلية. علم نقي، نتائج نقية.
                     </p>
                 </motion.div>
 

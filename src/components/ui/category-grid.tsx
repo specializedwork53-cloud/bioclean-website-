@@ -6,32 +6,32 @@ import Link from "next/link";
 
 const categories = [
     {
-        name: "Face Creams",
-        description: "Targeted treatments for every concern",
+        name: "كريمات الوجه",
+        description: "علاجات مستهدفة لكل المشاكل",
         image: "/images/Skin repair cream.jpeg",
         href: "#products",
-        count: "6 Products",
+        count: "6 منتجات",
     },
     {
-        name: "Cleansers",
-        description: "Gentle foam face washes",
+        name: "المنظفات",
+        description: "غسول وجه رغوي لطيف",
         image: "/images/Acne Foam.jpeg",
         href: "#products",
-        count: "6 Products",
+        count: "6 منتجات",
     },
     {
-        name: "Body Care",
-        description: "Head-to-toe nourishment",
+        name: "العناية بالجسم",
+        description: "تغذية من الرأس إلى القدمين",
         image: "/images/Brightness.jpeg",
         href: "#products",
-        count: "3 Products",
+        count: "3 منتجات",
     },
     {
-        name: "Intimate Care",
-        description: "Gentle daily hygiene",
+        name: "العناية الخاصة",
+        description: "نظافة يومية لطيفة",
         image: "/images/Antioxidant cream.jpeg",
         href: "#products",
-        count: "3 Products",
+        count: "3 منتجات",
     },
 ];
 
@@ -46,10 +46,10 @@ export function CategoryGrid() {
                     className="text-center mb-14"
                 >
                     <span className="text-sage text-xs tracking-[0.3em] uppercase font-medium">
-                        Explore
+                        اكتشفي
                     </span>
                     <h2 className="font-serif text-4xl md:text-5xl text-forest mt-3 font-bold">
-                        Shop By Category
+                        تسوقي حسب الفئة
                     </h2>
                 </motion.div>
 
@@ -88,7 +88,7 @@ export function CategoryGrid() {
 
                                     {/* Arrow */}
                                     <div className="absolute top-4 right-4 w-10 h-10 rounded-full border border-white/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:border-white/60">
-                                        <svg className="w-4 h-4 text-white transform -rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <svg className="w-4 h-4 text-white transform rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M12 5l7 7-7 7" />
                                         </svg>
                                     </div>

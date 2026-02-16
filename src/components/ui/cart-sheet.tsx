@@ -46,9 +46,9 @@ export function CartSheet() {
                     <div className="flex items-center gap-3">
                         <ShoppingBag className="w-5 h-5 text-forest" />
                         <h2 className="font-serif text-xl font-bold text-forest">
-                            Your Bag
+                            حقيبتك
                         </h2>
-                        <span className="text-xs text-warm-gray">({cartCount} items)</span>
+                        <span className="text-xs text-warm-gray">({cartCount} عناصر)</span>
                     </div>
                     <button
                         onClick={() => setIsOpen(false)}
@@ -66,14 +66,14 @@ export function CartSheet() {
                                 <ShoppingBag className="w-16 h-16" strokeWidth={1} />
                             </div>
                             <div className="space-y-2">
-                                <h3 className="font-serif text-2xl text-forest">Your Bag is Empty</h3>
-                                <p className="text-warm-gray text-sm">Discover our botanical skincare collection.</p>
+                                <h3 className="font-serif text-2xl text-forest">حقيبتك فارغة</h3>
+                                <p className="text-warm-gray text-sm">اكتشفي مجموعتنا النباتية للعناية بالبشرة.</p>
                             </div>
                             <button
                                 onClick={() => setIsOpen(false)}
                                 className="px-8 py-3 bg-forest text-ivory text-xs tracking-[0.2em] uppercase font-medium hover:bg-sage transition-all duration-300"
                             >
-                                Shop Now
+                                تسوقي الآن
                             </button>
                         </div>
                     ) : (
@@ -149,7 +149,7 @@ export function CartSheet() {
                                             </div>
 
                                             <span className="font-medium text-forest text-sm">
-                                                {(item.price * item.quantity).toLocaleString()} IQD
+                                                {(item.price * item.quantity).toLocaleString()} د.ع
                                             </span>
                                         </div>
                                     </div>
@@ -164,19 +164,19 @@ export function CartSheet() {
                     <div className="border-t border-light-gray p-6 space-y-4">
                         {/* Subtotal */}
                         <div className="flex items-center justify-between">
-                            <span className="text-warm-gray text-sm">Subtotal</span>
+                            <span className="text-warm-gray text-sm">المجموع الفرعي</span>
                             <span className="font-serif text-xl font-bold text-forest">
-                                {total().toLocaleString()} IQD
+                                {total().toLocaleString()} د.ع
                             </span>
                         </div>
 
                         <p className="text-[11px] text-warm-gray text-center">
-                            Shipping calculated at checkout
+                            يتم حساب الشحن عند الدفع
                         </p>
 
                         {/* Checkout Button */}
                         <button className="w-full py-4 bg-forest text-ivory text-sm tracking-widest uppercase font-semibold hover:bg-sage transition-colors duration-300 flex items-center justify-center gap-2">
-                            Proceed to Checkout <ArrowRight className="w-4 h-4" />
+                            التقدم للدفع <ArrowRight className="w-4 h-4 transform rotate-180" />
                         </button>
 
                         {/* Clear Cart */}
@@ -184,7 +184,7 @@ export function CartSheet() {
                             onClick={clearCart}
                             className="w-full text-center text-xs text-warm-gray/60 hover:text-red-500 transition-colors underline"
                         >
-                            Clear Bag
+                            إفراغ الحقيبة
                         </button>
                     </div>
                 )}

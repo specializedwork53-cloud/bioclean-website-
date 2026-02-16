@@ -4,26 +4,26 @@ import { Instagram, Facebook, Twitter, Mail, Phone, MapPin, ArrowRight } from "l
 
 const footerLinks = {
     shop: [
-        { label: "Face Creams", href: "#products" },
-        { label: "Cleansers", href: "#products" },
-        { label: "Body Care", href: "#products" },
-        { label: "Intimate Care", href: "#products" },
-        { label: "New Arrivals", href: "#featured" },
-        { label: "Best Sellers", href: "#featured" },
+        { label: "كريمات الوجه", href: "#products" },
+        { label: "المنظفات", href: "#products" },
+        { label: "العناية بالجسم", href: "#products" },
+        { label: "العناية الخاصة", href: "#products" },
+        { label: "وصل حديثاً", href: "#featured" },
+        { label: "الأكثر مبيعاً", href: "#featured" },
     ],
     company: [
-        { label: "Our Story", href: "#story" },
-        { label: "Ingredients", href: "#science" },
-        { label: "Sustainability", href: "#" },
-        { label: "Press", href: "#" },
-        { label: "Careers", href: "#" },
+        { label: "قصتنا", href: "#story" },
+        { label: "المكونات", href: "#science" },
+        { label: "الاستدامة", href: "#" },
+        { label: "الصحافة", href: "#" },
+        { label: "الوظائف", href: "#" },
     ],
     support: [
-        { label: "Contact Us", href: "#" },
-        { label: "Shipping & Returns", href: "#" },
-        { label: "FAQ", href: "#" },
-        { label: "Track Order", href: "#" },
-        { label: "Size Guide", href: "#" },
+        { label: "اتصل بنا", href: "#" },
+        { label: "الشحن والإرجاع", href: "#" },
+        { label: "الأسئلة الشائعة", href: "#" },
+        { label: "تتبع الطلب", href: "#" },
+        { label: "دليل المقاسات", href: "#" },
     ],
 };
 
@@ -35,21 +35,21 @@ export function Footer() {
                 <div className="max-w-7xl mx-auto px-6 py-16 md:py-20 flex flex-col md:flex-row items-center justify-between gap-12 text-center md:text-left">
                     <div className="max-w-md">
                         <h3 className="font-serif text-3xl font-medium text-white mb-4">
-                            Join the BioClean Community
+                            انضمي إلى مجتمع BioClean
                         </h3>
                         <p className="text-white/60 text-sm leading-relaxed">
-                            Subscribe to receive updates, access to exclusive deals, and more.
+                            اشتركي لتصلكِ آخر التحديثات، والعروض الحصرية، والمزيد.
                         </p>
                     </div>
 
                     <form className="flex w-full max-w-sm border-b border-white/20 pb-2 focus-within:border-white transition-colors duration-300">
                         <input
                             type="email"
-                            placeholder="Enter your email"
-                            className="w-full bg-transparent border-none text-white focus:ring-0 placeholder-white/40 pb-2"
+                            placeholder="أدخلي بريدك الإلكتروني"
+                            className="w-full bg-transparent border-none text-white focus:ring-0 placeholder-white/40 pb-2 text-right"
                         />
                         <button type="submit" className="text-white hover:text-gold-light transition-colors">
-                            <ArrowRight className="w-5 h-5" />
+                            <ArrowRight className="w-5 h-5 transform rotate-180" />
                         </button>
                     </form>
                 </div>
@@ -64,20 +64,19 @@ export function Footer() {
                             BioClean
                         </span>
                         <p className="text-white/50 text-sm leading-relaxed max-w-sm">
-                            Pure science skincare. Luxury botanical formulations crafted with
-                            100% natural ingredients for radiant, healthy skin.
+                            علم العناية بالبشرة النقي. تركيبات نباتية فاخرة مصنوعة من مكونات طبيعية 100% لبشرة صحية ومشرقة.
                         </p>
 
                         <div className="space-y-4 pt-4">
                             <a href="mailto:info@bioclean.com" className="flex items-center gap-3 text-sm text-white/60 hover:text-white transition-colors">
-                                <Mail className="w-4 h-4" /> info@bioclean.com
+                                <Mail className="w-4 h-4 ml-2" /> info@bioclean.com
                             </a>
                         </div>
                     </div>
 
                     {/* Links Columns */}
                     <div className="space-y-6">
-                        <h3 className="font-medium text-white text-xs tracking-[0.2em] uppercase">Shop</h3>
+                        <h3 className="font-medium text-white text-xs tracking-[0.2em] uppercase">المتجر</h3>
                         <ul className="space-y-4">
                             {footerLinks.shop.map((link) => (
                                 <li key={link.label}>
@@ -90,7 +89,7 @@ export function Footer() {
                     </div>
 
                     <div className="space-y-6">
-                        <h3 className="font-medium text-white text-xs tracking-[0.2em] uppercase">Company</h3>
+                        <h3 className="font-medium text-white text-xs tracking-[0.2em] uppercase">الشركة</h3>
                         <ul className="space-y-4">
                             {footerLinks.company.map((link) => (
                                 <li key={link.label}>
@@ -103,7 +102,7 @@ export function Footer() {
                     </div>
 
                     <div className="space-y-6">
-                        <h3 className="font-medium text-white text-xs tracking-[0.2em] uppercase">Support</h3>
+                        <h3 className="font-medium text-white text-xs tracking-[0.2em] uppercase">الدعم</h3>
                         <ul className="space-y-4">
                             {footerLinks.support.map((link) => (
                                 <li key={link.label}>
@@ -119,7 +118,7 @@ export function Footer() {
                 {/* Bottom Bar */}
                 <div className="flex flex-col md:flex-row items-center justify-between gap-6 pt-8 border-t border-white/5">
                     <p className="text-xs text-white/30">
-                        © 2026 BioClean. All rights reserved.
+                        © 2026 BioClean. جميع الحقوق محفوظة.
                     </p>
 
                     <div className="flex gap-6">

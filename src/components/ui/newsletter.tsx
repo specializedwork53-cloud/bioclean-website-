@@ -26,13 +26,13 @@ export function Newsletter() {
                     viewport={{ once: true }}
                 >
                     <span className="text-sage text-xs tracking-[0.3em] uppercase font-medium">
-                        Stay Connected
+                        ابقي على تواصل
                     </span>
                     <h2 className="font-serif text-4xl md:text-5xl text-forest mt-3 mb-4 font-bold">
-                        Join the BioClean Family
+                        انضمي لعائلة BioClean
                     </h2>
                     <p className="text-warm-gray text-base md:text-lg max-w-lg mx-auto mb-10">
-                        Subscribe for exclusive offers, skincare tips, and early access to new collections.
+                        اشتركي للحصول على عروض حصرية، نصائح للعناية بالبشرة، والوصول المبكر للمجموعات الجديدة.
                     </p>
 
                     <form
@@ -43,8 +43,8 @@ export function Newsletter() {
                             type="email"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
-                            placeholder="Enter your email"
-                            className="flex-1 px-6 py-4 bg-white border border-light-gray text-charcoal placeholder-warm-gray/50 text-sm tracking-wide focus:outline-none focus:border-sage transition-colors"
+                            placeholder="أدخلي بريدك الإلكتروني"
+                            className="flex-1 px-6 py-4 bg-white border border-light-gray text-charcoal placeholder-warm-gray/50 text-sm tracking-wide focus:outline-none focus:border-sage transition-colors text-right"
                             required
                         />
                         <button
@@ -52,17 +52,17 @@ export function Newsletter() {
                             className="px-8 py-4 bg-forest text-ivory text-sm tracking-widest uppercase font-medium hover:bg-sage transition-colors duration-500 flex items-center justify-center gap-2"
                         >
                             {submitted ? (
-                                <span>Thank You ✓</span>
+                                <span>شكراً لكِ ✓</span>
                             ) : (
                                 <>
-                                    Subscribe <Send className="w-4 h-4" />
+                                    اشتراك <Send className="w-4 h-4 rotate-180" />
                                 </>
                             )}
                         </button>
                     </form>
 
                     <p className="text-warm-gray/60 text-xs mt-6 tracking-wide">
-                        By subscribing you agree to our Privacy Policy. Unsubscribe anytime.
+                        بالاشتراك، أنت توافقين على سياسة الخصوصية الخاصة بنا. يمكنك إلغاء الاشتراك في أي وقت.
                     </p>
                 </motion.div>
             </div>
